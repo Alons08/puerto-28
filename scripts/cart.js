@@ -482,7 +482,7 @@ function submitOrder() {
     message += `\nPor favor, confirmen mi pedido. ¡Gracias!`;
             
     // Abrir WhatsApp 931088900 mio
-    const whatsappUrl = `https://wa.me/51916064013?text=${encodeURIComponent(message)}`; /*AQUI EL NUMERO*/
+    const whatsappUrl = `https://wa.me/51906877308?text=${encodeURIComponent(message)}`; /*AQUI EL NUMERO*/
     window.open(whatsappUrl, '_blank');
     
     hideCart(); //ocultar el carrito
