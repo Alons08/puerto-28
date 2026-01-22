@@ -43,7 +43,7 @@ const products = [
         category: "ceviches",
         price: 40,
         description: "Pescado blanco 250gr, choclo, camote, leche de tigre, cancha.",
-        image: "./images/menu/ceviche-de-pescado.jpg",
+        image: "./images/menu/ceviche-pescado.jpg",
         available: true
     },
     {
@@ -117,7 +117,7 @@ const products = [
         category: "arroces",
         price: 35,
         description: "Chicharrón de pescado, cebolla china, todo al wok.",
-        image: "./images/menu/chaufa-de-pescado.jpg",
+        image: "./images/menu/chaufa-pescado.jpg",
         available: true
     },
     {
@@ -155,7 +155,7 @@ const products = [
         category: "calientes",
         price: 20,
         description: "250gr de chicharrón de pota.",
-        image: "./images/menu/chicharron-de-pota.jpg",
+        image: "./images/menu/chicharron-pota.jpg",
         available: true
     },
     {
@@ -173,7 +173,7 @@ const products = [
         category: "calientes",
         price: 25,
         description: "Cabrilla frita, salsa criolla. Yuca, porción de arroz.",
-        image: "./images/menu/pescado-frito.jpg",
+        image: "./images/menu/cabrilla-frita.jpg",
         available: true
     },
     {
@@ -220,7 +220,7 @@ const products = [
         category: "criollos",
         price: 25,
         description: "Saltado de pollo clásico.",
-        image: "./images/menu/saltado-de-pollo.jpg",
+        image: "./images/menu/lomo-saltado-pollo.jpg",
         available: true
     },
     {
