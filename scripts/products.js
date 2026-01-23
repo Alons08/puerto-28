@@ -563,7 +563,7 @@ const products = [
         category: "bebidas",
         price: 7,
         description: "Gaseosa 1 lt fría.",
-        image: "./images/menu/gaseosa-1lt.jpg",
+        image: "./images/menu/gaseosa-inca-1lt.jpg",
         available: true
     },
     {
@@ -572,7 +572,7 @@ const products = [
         category: "bebidas",
         price: 13,
         description: "Gaseosa 1/5 lt fría.",
-        image: "./images/menu/gaseosa-1-5lt.jpg",
+        image: "./images/menu/gaseosa-inca-1-5lt.jpg",
         available: true
     },
     {
@@ -644,7 +644,7 @@ const products = [
         category: "bebidas",
         price: 8,
         description: "Chicha morada 1/2 lt.",
-        image: "./images/menu/chicha-morada-1-2lt.jpg",
+        image: "./images/menu/jarra-chicha-morada.jpg",
         available: true
     }
 ];
