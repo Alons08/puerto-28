@@ -14,7 +14,7 @@ const products = [
         id: 2,
         name: "Ceviche carretillero de pescado",
         category: "ceviches",
-        price: 25,
+        price: 20,
         description: "Pescado blanco, choclo, camote, chicharrón de pota y chifles.",
         image: "./images/menu/ceviche-carretillero-de-pescado.jpg",
         available: true
@@ -159,6 +159,15 @@ const products = [
         available: true
     },
     {
+        id: 38,
+        name: "Chicharrón de pescado",
+        category: "calientes",
+        price: 25,
+        description: "250gr de chicharrón de pescado.",
+        image: "./images/menu/chicharron-pescado.jpg",
+        available: true
+    },
+    {
         id: 33,
         name: "Jalea mixta",
         category: "calientes",
@@ -201,80 +210,6 @@ const products = [
         price: 20,
         description: "Chilcano de pescado + cangrejo.",
         image: "./images/menu/chilcano-especial.jpg",
-        available: true
-    }
-    ,
-    // --- Criollos ---
-    {
-        id: 50,
-        name: "Lomo saltado",
-        category: "criollos",
-        price: 30,
-        description: "Lomo saltado clásico.",
-        image: "./images/menu/lomo-saltado.jpg",
-        available: true
-    },
-    {
-        id: 51,
-        name: "Saltado de pollo",
-        category: "criollos",
-        price: 25,
-        description: "Saltado de pollo clásico.",
-        image: "./images/menu/lomo-saltado-pollo.jpg",
-        available: true
-    },
-    {
-        id: 52,
-        name: "Chaufa de pollo",
-        category: "criollos",
-        price: 25,
-        description: "Chaufa de pollo al wok.",
-        image: "./images/menu/chaufa-de-pollo.jpg",
-        available: true
-    },
-    {
-        id: 53,
-        name: "Pechuga a la plancha",
-        category: "criollos",
-        price: 25,
-        description: "Pechuga de pollo a la plancha.",
-        image: "./images/menu/pechuga-a-la-plancha.jpg",
-        available: true
-    },
-    {
-        id: 54,
-        name: "Bistec a lo pobre",
-        category: "criollos",
-        price: 35,
-        description: "Bistec a lo pobre tradicional.",
-        image: "./images/menu/bistec-a-lo-pobre.jpg",
-        available: true
-    },
-    {
-        id: 55,
-        name: "Arroz a la cubana",
-        category: "criollos",
-        price: 17,
-        description: "Arroz a la cubana clásico.",
-        image: "./images/menu/arroz-a-la-cubana.jpg",
-        available: true
-    },
-    {
-        id: 56,
-        name: "Pollo broaster",
-        category: "criollos",
-        price: 25,
-        description: "Pollo broaster crocante.",
-        image: "./images/menu/pollo-broaster.jpg",
-        available: true
-    },
-    {
-        id: 57,
-        name: "Tallarín saltado",
-        category: "criollos",
-        price: 25,
-        description: "Tallarín saltado clásico.",
-        image: "./images/menu/tallarin-saltado.jpg",
         available: true
     }
     ,
@@ -447,11 +382,11 @@ const products = [
     // --- Rondas ---
     {
         id: 110,
-        name: "Ronda de piqueos",
+        name: "Mini ronda de ceviche",
         category: "rondas",
-        price: 50,
-        description: "A elegir 4 entre (bolitas de causa, choritos a la chalaca, tequeños, pulpo al olivo, shots de leche de tigre y tiradito al ají amarillo).",
-        image: "./images/menu/ronda-de-piqueos.jpg",
+        price: 55,
+        description: "Ceviche clásico, ceviche en salsa de rocoto, ceviche en salsa de ají amarillo y Leche de tigre.",
+        image: "./images/menu/mini-ronda-ceviche.jpg",
         available: true
     },
     {
@@ -502,30 +437,12 @@ const products = [
         available: true
     },
     {
-        id: 123,
-        name: "Pulpo al olivo",
-        category: "piqueos",
-        price: 30,
-        description: "Rodajas de pulpo bañadas en crema al olivo.",
-        image: "./images/menu/pulpo-al-olivo.jpg",
-        available: true
-    },
-    {
         id: 124,
         name: "Shots de leche de tigre",
         category: "piqueos",
         price: 10,
         description: "5 shots de leche de tigre.",
         image: "./images/menu/shots-leche-de-tigre.jpg",
-        available: true
-    },
-    {
-        id: 125,
-        name: "Tiradito al ají amarillo",
-        category: "piqueos",
-        price: 30,
-        description: "Láminas de pescado fresco en crema de ají amarillo especial.",
-        image: "./images/menu/tiradito-aji-amarillo.jpg",
         available: true
     }
     ,
@@ -543,7 +460,7 @@ const products = [
         id: 131,
         name: "Gordita",
         category: "bebidas",
-        price: 5,
+        price: 5.5,
         description: "Gaseosa tamaño gordita.",
         image: "./images/menu/gaseosa-gordita.jpg",
         available: true
@@ -561,7 +478,7 @@ const products = [
         id: 133,
         name: "Gaseosa 1 lt",
         category: "bebidas",
-        price: 7,
+        price: 10,
         description: "Gaseosa 1 lt fría.",
         image: "./images/menu/gaseosa-inca-1lt.jpg",
         available: true
