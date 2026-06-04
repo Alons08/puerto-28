@@ -102,6 +102,12 @@ body {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
+/* centrar el botón de checkout */
+#checkout {
+    display: block;
+    margin: 0 auto;
+}
+
 #cancel-order {
     background-color: #7f8c8d;
     color: #fff;
@@ -181,6 +187,42 @@ body {
     background-color: var(--background-light);
 }
 
+.menu-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.menu-search {
+    display: flex;
+    justify-content: center;
+}
+
+.menu-search input {
+    width: min(100%, 420px);
+    padding: 14px 20px;
+    border: 2px solid #17a2b8;
+    border-radius: 999px;
+    background: var(--white);
+    color: var(--black);
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0 6px 18px rgba(23, 162, 184, 0.12);
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.menu-search input::placeholder {
+    color: #9aa5ad;
+}
+
+.menu-search input:focus {
+    border-color: var(--primary-dark);
+    box-shadow: 0 8px 20px rgba(23, 162, 184, 0.18);
+    transform: translateY(-1px);
+}
+
 .menu-filters {
     display: flex;
     justify-content: center;
@@ -207,6 +249,7 @@ body {
     color: var(--white);
     border-color: #17a2b8;
     box-shadow: 0 2px 8px rgba(23, 162, 184, 0.3);
+    transform: translateY(-1px);
 }
 
 .filter-btn:hover:not(.active) {
@@ -1030,6 +1073,14 @@ body {
         text-align: center;
     }
 
+    .menu-search input {
+        width: 100%;
+    }
+
+    .menu-filters {
+        gap: 8px;
+    }
+
     .cart-container {
         width: 100%;
         max-width: 100%;
@@ -1139,6 +1190,11 @@ body {
 
     .menu-items {
         grid-template-columns: 1fr;
+    }
+
+    .menu-search input {
+        font-size: 0.95rem;
+        padding: 12px 18px;
     }
     
     .restaurant-name {

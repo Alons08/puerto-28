@@ -53,17 +53,23 @@
     <section class="menu" id="menu">
         <div class="container">
             <h2 class="section-title">Nuestra Carta</h2>
-            <p class="section-subtitle">Deliciosos platos preparados con ingredientes frescos</p>
             
-            <div class="menu-filters">
-                <button class="filter-btn active" data-category="ceviches">Ceviches</button>
-                <button class="filter-btn" data-category="arroces">Arroces</button>
-                <button class="filter-btn" data-category="calientes">Calientes</button>
-                <button class="filter-btn" data-category="duos">Duos</button>
-                <button class="filter-btn" data-category="trios">Trios</button>
-                <button class="filter-btn" data-category="rondas">Rondas</button>
-                <button class="filter-btn" data-category="piqueos">Piqueos</button>
-                <button class="filter-btn" data-category="bebidas">Bebidas</button>
+            <div class="menu-controls">
+                <div class="menu-search">
+                    <input type="search" id="menu-search" placeholder="Busca tu plato favorito..." aria-label="Buscar producto por nombre">
+                </div>
+
+                <div class="menu-filters">
+                    <button class="filter-btn active" data-category="all">Todos</button>
+                    <button class="filter-btn" data-category="ceviches">Ceviches</button>
+                    <button class="filter-btn" data-category="arroces">Arroces</button>
+                    <button class="filter-btn" data-category="calientes">Calientes</button>
+                    <button class="filter-btn" data-category="duos">Duos</button>
+                    <button class="filter-btn" data-category="trios">Trios</button>
+                    <button class="filter-btn" data-category="rondas">Rondas</button>
+                    <button class="filter-btn" data-category="piqueos">Piqueos</button>
+                    <button class="filter-btn" data-category="bebidas">Bebidas</button>
+                </div>
             </div>
             
             <div class="menu-items" id="menu-items">

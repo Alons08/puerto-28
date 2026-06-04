@@ -569,19 +569,51 @@ const products = [
 // Hacer el array accesible globalmente
 window.restaurantProducts = products;
 
-function renderProducts(category = 'ceviches') {
+const menuState = {
+    category: 'all',
+    search: ''
+};
+
+function normalizeText(text) {
+    return (text || '').toLowerCase().trim();
+}
+
+function getFilteredProducts(category, searchText) {
+    const normalizedSearch = normalizeText(searchText);
+
+    return products.filter(product => {
+        const matchesCategory = category === 'all' || product.category === category;
+        const matchesSearch = !normalizedSearch || normalizeText(product.name).includes(normalizedSearch);
+
+        return matchesCategory && matchesSearch;
+    });
+}
+
+function updateActiveFilterButton(category) {
+    document.querySelectorAll('.filter-btn').forEach(button => {
+        button.classList.toggle('active', button.dataset.category === category);
+    });
+}
+
+function renderProducts(category = menuState.category, searchText = menuState.search) {
     const menuItemsContainer = document.getElementById('menu-items');
     if (!menuItemsContainer) return;
 
     menuItemsContainer.innerHTML = '';
 
-    const filteredProducts = products.filter(product => product.category === category);
+    const filteredProducts = getFilteredProducts(category, searchText);
+
+    const noResultsMessage = category === 'all'
+        ? 'No se encontraron productos con esa búsqueda'
+        : searchText
+            ? 'No se encontraron productos para esa categoría y búsqueda'
+            : 'No hay productos disponibles en esta categoría';
 
     if (filteredProducts.length === 0) {
         menuItemsContainer.innerHTML = `
             <div class="no-products">
                 <i class="fas fa-utensils"></i>
-                <p>No hay productos disponibles en esta categoría</p>
+                <p>${noResultsMessage}</p>
             </div>
         `;
         return;
@@ -618,14 +650,32 @@ function renderProducts(category = 'ceviches') {
 }
 
 function setupFilters() {
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    filterButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            filterButtons.forEach(btn => btn.classList.remove('active'));
-            this.classList.add('active');
-            renderProducts(this.dataset.category);
+    const menuFilters = document.querySelector('.menu-filters');
+    const searchInput = document.getElementById('menu-search');
+
+    if (menuFilters) {
+        menuFilters.addEventListener('click', function(event) {
+            const button = event.target.closest('.filter-btn');
+            if (!button) return;
+
+            menuState.category = button.dataset.category || 'all';
+            menuState.search = '';
+
+            if (searchInput) {
+                searchInput.value = '';
+            }
+
+            updateActiveFilterButton(menuState.category);
+            renderProducts();
         });
-    });
+    }
+
+    if (searchInput) {
+        searchInput.addEventListener('input', function() {
+            menuState.search = this.value;
+            renderProducts();
+        });
+    }
 }
 
 function setupProductEvents() {
@@ -676,7 +726,11 @@ function setupProductEvents() {
 }
 
 function initProducts() {
-    renderProducts('ceviches');
+    menuState.category = 'all';
+    menuState.search = '';
+
+    updateActiveFilterButton(menuState.category);
+    renderProducts();
     setupFilters();
     setupProductEvents();
 }
