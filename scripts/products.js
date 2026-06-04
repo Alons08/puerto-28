@@ -602,12 +602,13 @@ function renderProducts(category = menuState.category, searchText = menuState.se
     menuItemsContainer.innerHTML = '';
 
     const filteredProducts = getFilteredProducts(category, searchText);
+    const hasSearchText = Boolean(normalizeText(searchText));
 
-    const noResultsMessage = category === 'all'
-        ? 'No se encontraron productos con esa búsqueda'
-        : searchText
-            ? 'No se encontraron productos para esa categoría y búsqueda'
-            : 'No hay productos disponibles en esta categoría';
+    const noResultsMessage = hasSearchText
+        ? category === 'all'
+            ? 'No se encontraron productos con ese nombre'
+            : 'No se encontraron productos con ese nombre en esta categoría'
+        : 'No hay productos disponibles en esta categoría';
 
     if (filteredProducts.length === 0) {
         menuItemsContainer.innerHTML = `
